@@ -1,3 +1,5 @@
+@import url(../fonts/playfair.css);
+@import url(../fonts/montserrat-.css);
 @font-face {
   font-family: "bootstrap-icons";
   src:
@@ -61,7 +63,7 @@ a {
 ========================================= */
 
 .top-bar {
-  height: 32px;
+  height: auto;
 
   background: #f3eee1;
 
@@ -73,11 +75,12 @@ a {
 }
 
 .top-bar-inner {
-  height: 32px;
+  /* height: 32px; */
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 6px 0;
 }
 
 /* =========================================
@@ -157,8 +160,8 @@ a {
 }
 
 .top-bar-right > a {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 
   display: flex;
   align-items: center;
@@ -170,7 +173,7 @@ a {
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 20px;
 
   transition: all 0.25s ease;
 }
