@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Evermark Publishing - Blog page</title>
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =====================================
+     TOP BAR
+===================================== -->
+    <div class="main-top-header">
+      <div class="top-bar">
+        <div class="container">
+          <div class="top-bar-inner">
+            <!-- Left -->
+            <div class="top-bar-left">
+              <a href="tel:082516611935" class="top-item">
+                <i class="bi bi-telephone"></i>
+                <span>082516611935</span>
+              </a>
+
+              <span class="top-divider"></span>
+
+              <a href="mailto:evermarkpustaka@gmail.com" class="top-item">
+                <i class="bi bi-envelope"></i>
+                <span>evermarkpustaka@gmail.com</span>
+              </a>
+            </div>
+
+            <!-- Right -->
+            <div class="top-bar-right">
+              <span class="top-message">
+                <i class="bi bi-book"></i>
+                Publishing stories that inspire
+              </span>
+
+              <span class="top-divider"></span>
+
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="main-header" id="mainHeader">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg">
+            <!-- Logo -->
+            <a href="#" class="navbar-brand">
+              <div class="logo-box">
+                <div class="logo-icon">
+                  <img
+                    src="assets/images/logo-1.png"
+                    alt="logo"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </a>
+
+            <!-- Mobile Button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="mainNavigation">
+              <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"> Home </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About Us </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">
+                    Publishing Services
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="book-catalog.html">
+                    Book Catalog
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="blog.html">
+                    News & Stories
+                  </a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                  <a href="contact-us.html" class="talk-btn">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    Get in Touch
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <section class="about-page-hero">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="about-breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span>Blog</span>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- LEFT CONTENT -->
+          <div class="col-lg-6">
+            <div class="about-hero-content">
+              <span class="about-eyebrow"> INSIGHTS & INSPIRATION </span>
+
+              <h1>News & <span>Stories</span></h1>
+
+              <p>
+                Writing a book is a journey. From developing your first idea to
+                creating unforgettable characters, discover practical tips that
+                can help you write a book readers will love.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="col-lg-6">
+            <div class="about-hero-image">
+              <img
+                src="assets/images/blog-bg-banner.png"
+                alt="Evermark Publishing Books"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-page">
+      <div class="container">
+        <div class="blog-page-header">
+          <!-- Search -->
+          <div class="blog-search">
+            <input type="text" placeholder="Search articles..." />
+
+            <button type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- =================================
+             CATEGORY FILTER
+        ================================== -->
+
+        <div class="blog-categories">
+          <button class="category-btn active">All</button>
+
+          <button class="category-btn">Writing Tips</button>
+
+          <button class="category-btn">Publishing</button>
+
+          <button class="category-btn">Marketing</button>
+
+          <button class="category-btn">Author Stories</button>
+
+          <button class="category-btn">Book Reviews</button>
+        </div>
+
+        <!-- =================================
+             FEATURED ARTICLE
+        ================================== -->
+
+        <!-- =================================
+             LATEST ARTICLES HEADER
+        ================================== -->
+
+        <div class="articles-heading">
+          <div>
+            <span class="blog-eyebrow"> LATEST FROM EVERMARK </span>
+
+            <h2>Latest <span>Articles</span></h2>
+          </div>
+
+          <a href="#" class="view-all">
+            View All Articles
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- =================================
+             BLOG GRID
+        ================================== -->
+
+        <div class="row g-4">
+          <!-- Blog Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/blog-22.png" alt="Writing tips" />
+
+                <span class="blog-card-category"> WRITING TIPS </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  May 15, 2026
+                  <span>•</span>
+                  5 min read
+                </div>
+
+                <h3>How to Write a Book That Keeps Readers Turning Pages</h3>
+
+                <p>
+                  Learn how to create strong openings, memorable characters, and
+                  a story structure that keeps readers engaged.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/blog-4.png" alt="Publishing guide" />
+
+                <span class="blog-card-category"> PUBLISHING </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  May 10, 2026
+                  <span>•</span>
+                  6 min read
+                </div>
+
+                <h3>A Complete Guide to Publishing Your First Book</h3>
+
+                <p>
+                  Everything new authors should know before taking their
+                  manuscript from an idea to a published book.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/blog-7.png" alt="Book marketing" />
+
+                <span class="blog-card-category"> MARKETING </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  May 08, 2026
+                  <span>•</span>
+                  7 min read
+                </div>
+
+                <h3>How to Market Your Book and Reach More Readers</h3>
+
+                <p>
+                  Discover simple and effective strategies authors can use to
+                  build visibility and connect with their audience.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Blog Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/blog-5.png" alt="Author story" />
+
+                <span class="blog-card-category"> AUTHOR STORIES </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  May 05, 2026
+                  <span>•</span>
+                  6 min read
+                </div>
+
+                <h3>From First Draft to Published Author: A Real Journey</h3>
+
+                <p>
+                  Follow one author's journey from a simple idea to holding a
+                  finished book in their hands.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Blog Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img
+                  src="assets/images/blog-6.png"
+                  alt="Book recommendations"
+                />
+
+                <span class="blog-card-category"> BOOK REVIEWS </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  May 02, 2026
+                  <span>•</span>
+                  4 min read
+                </div>
+
+                <h3>10 Books Every Aspiring Writer Should Read</h3>
+
+                <p>
+                  A carefully selected collection of books that can inspire
+                  creativity and improve your writing.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Blog Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-card-image">
+                <img src="assets/images/blog-11.png" alt="Self publishing" />
+
+                <span class="blog-card-category"> PUBLISHING </span>
+              </div>
+
+              <div class="blog-card-content">
+                <div class="blog-card-meta">
+                  April 28, 2026
+                  <span>•</span>
+                  8 min read
+                </div>
+
+                <h3>
+                  Self-Publishing vs Traditional Publishing: What to Choose?
+                </h3>
+
+                <p>
+                  Compare the two publishing paths and discover which approach
+                  could be right for your book.
+                </p>
+
+                <a href="#" class="blog-link">
+                  Read More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- =================================
+             PAGINATION
+        ================================== -->
+
+        <div class="blog-pagination">
+          <button class="pagination-arrow">
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <button class="pagination-number active">1</button>
+
+          <button class="pagination-number">2</button>
+
+          <button class="pagination-number">3</button>
+
+          <span>...</span>
+
+          <button class="pagination-number">8</button>
+
+          <button class="pagination-arrow">
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+     FOOTER SECTION
+========================================= -->
+
+    <footer class="evermark-footer">
+      <!-- =====================================
+         TOP CTA
+    ====================================== -->
+
+      <!-- =====================================
+         FOOTER BRAND
+    ====================================== -->
+
+      <div class="evermark-footer-main">
+        <div class="container">
+          <div class="evermark-footer-divider"></div>
+
+          <!-- FOOTER COLUMNS -->
+
+          <div class="row evermark-footer-columns">
+            <!-- LOGO -->
+            <div class="col-lg-3 col-md-6">
+              <div class="evermark-footer-logo">
+                <img
+                  src="assets/images/footer-logo.png"
+                  alt="img"
+                  class="img-fluid"
+                />
+
+                <!-- <strong> evermark </strong> -->
+              </div>
+
+              <div class="evermark-follow">
+                <span> Follow Us </span>
+
+                <div class="evermark-socials">
+                  <a href="#">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+
+                  <a href="#">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+
+                  <a href="#">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+
+                  <a href="#">
+                    <i class="bi bi-tiktok"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- MENU -->
+            <div class="col-lg-3 col-md-6">
+              <div class="evermark-footer-column">
+                <h4>Explore</h4>
+
+                <ul>
+                  <li>
+                    <a href="index.html"> Home </a>
+                  </li>
+
+                  <li>
+                    <a href="about.html"> About Us </a>
+                  </li>
+
+                  <li>
+                    <a href="services.html"> Publishing Services </a>
+                  </li>
+
+                  <li>
+                    <a href="blog.html"> News & Stories </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="evermark-footer-column">
+                <h4>Publishing</h4>
+
+                <ul>
+                  <li>
+                    <a href="#"> Publish Your Book </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> Submit Your Manuscript </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> Editing & Proofreading </a>
+                  </li>
+
+                  <li>
+                    <a href="#"> Book Design </a>
+                  </li>
+
+                  <li>
+                    <a href="#">Printing Services</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="col-lg-3 col-md-6">
+              <div class="evermark-footer-column">
+                <h4>Get In Touch</h4>
+
+                <p>
+                  Let’s bring your story to life and turn your ideas into a book
+                  worth remembering.
+                </p>
+
+                <a href="tel:+6285216611935" class="evermark-phone">
+                  + (91)9876543210
+                </a>
+
+                <a
+                  href="mailto:evermarkpublishing@gmail.com"
+                  class="evermark-email"
+                >
+                  evermarkpublishing@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================
+                 COPYRIGHT
+            ================================== -->
+
+          <div class="evermark-footer-bottom">
+            <p>&copy; 2026 Evermark Publishing. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHATSAPP -->
+      <a href="#" class="evermark-whatsapp">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+
+      <!-- BACK TO TOP -->
+      <a href="#" class="evermark-back-top">
+        <i class="bi bi-chevron-up"></i>
+      </a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

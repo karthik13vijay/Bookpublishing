@@ -1,0 +1,5124 @@
+@font-face {
+  font-family: "bootstrap-icons";
+  src:
+    url("../fonts/bootstrap-icons.woff2") format("woff2"),
+    url("./fonts/bootstrap-icons.woff") format("woff");
+}
+/* =====================================   GLOBAL===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #173b31;
+  background: #f7f3e7;
+}
+a {
+  text-decoration: none;
+} /* =====================================   TOP BAR===================================== */
+.top-bar {
+  height: 30px;
+  background: #f1ecdc;
+  border-bottom: 1px solid rgba(50, 60, 40, 0.08);
+  font-size: 14px;
+  color: #555b51;
+}
+.main-header {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Header becomes fixed after scrolling */
+.main-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.3s ease;
+}
+
+/* Small animation when header becomes sticky */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+.seconday-bg {
+  background: #f2ede1 !important;
+}
+/* =========================================
+   MODERN TOP BAR
+========================================= */
+
+.top-bar {
+  height: 32px;
+
+  background: #f3eee1;
+
+  border-bottom: 1px solid rgba(23, 61, 57, 0.08);
+
+  color: #62655e;
+
+  font-size: 10px;
+}
+
+.top-bar-inner {
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.top-bar-left {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.top-item {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #555a54;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.top-item i {
+  color: #c69519;
+
+  font-size: 11px;
+}
+
+.top-item:hover {
+  color: #173d39;
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.top-divider {
+  width: 1px;
+  height: 13px;
+
+  background: rgba(23, 61, 57, 0.15);
+}
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.top-message {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #686b63;
+
+  font-size: 12px;
+}
+
+.top-message i {
+  color: #c69519;
+
+  font-size: 10px;
+}
+
+.top-bar-right > a {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #666a62;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  transition: all 0.25s ease;
+}
+
+.top-bar-right > a:hover {
+  background: #173d39;
+
+  color: #fff;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 767px) {
+  .top-bar {
+    height: 30px;
+  }
+
+  .top-bar-inner {
+    height: 30px;
+  }
+
+  .top-message,
+  .top-bar-right .top-divider,
+  .top-bar-right > a {
+    display: none;
+  }
+
+  .top-bar-left {
+    width: 100%;
+
+    justify-content: space-between;
+
+    gap: 8px;
+  }
+
+  .top-bar-left .top-divider {
+    display: block;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .top-item {
+    font-size: 8px;
+
+    gap: 4px;
+  }
+
+  .top-item i {
+    font-size: 9px;
+  }
+
+  .top-bar-left {
+    gap: 7px;
+  }
+}
+.profile-btn {
+  background: #d19a16;
+  color: #fff;
+  padding: 4px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+} /* =====================================   HEADER===================================== */
+.main-header {
+  height: 80px;
+  background: #fbfbfbf7;
+  border-bottom: 1px solid rgba(40, 50, 40, 0.08);
+  position: relative;
+  z-index: 20;
+}
+.navbar {
+  min-height: 62px;
+  padding: 0;
+} /* LOGO */
+.navbar-brand {
+  margin: 0;
+}
+.logo-box {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  /* height: 54px; */
+}
+.logo-icon {
+  /* width: 38px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c49620;
+  font-size: 29px; */
+}
+.logo-box span {
+  color: #2c4136;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 700;
+} /* NAVIGATION */
+.navbar-nav {
+  gap: 6px;
+}
+.nav-link {
+  color: #303c35 !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 12px !important;
+  transition: 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #c38f0e !important;
+} /* SUBMIT BUTTON */
+.talk-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #d39a13;
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(194, 139, 15, 0.25);
+  transition: 0.3s;
+}
+.talk-btn:hover {
+  background: #b98209;
+  color: #fff;
+  transform: translateY(-2px);
+} /* =====================================   HERO===================================== */
+.hero-section {
+  position: relative;
+  min-height: 410px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(255, 255, 255, 0.9),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #f8f4e9 0%, #f1ebdb 100%);
+  display: flex;
+  align-items: center;
+} /* subtle background texture */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(100, 90, 65, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 18px 18px;
+  opacity: 0.2;
+} /* =====================================   HERO ROW===================================== */
+.hero-row {
+  /* min-height: 410px; */
+  position: relative;
+  z-index: 3;
+  padding: 60px 0;
+} /* =====================================   HERO CONTENT===================================== */
+.hero-content {
+  padding: 20px 0 25px 5px;
+} /* LABEL */
+.small-label {
+  display: inline-block;
+  background: #183c32;
+  color: #fff;
+  padding: 4px 11px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 7px;
+} /* HEADING */
+.hero-content h1 {
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 43px);
+  line-height: 0.98;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #173c32;
+}
+.hero-content h1 span {
+  display: block;
+  color: #bd8c1a;
+} /* SCRIPT FONT */
+.hero-script {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(42px, 4vw, 60px);
+  line-height: 0.85;
+  color: #153a30;
+  margin-top: 2px;
+  /* margin-left: 45px; */
+} /* DESCRIPTION */
+.hero-description {
+  max-width: 330px;
+  color: #697067;
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 12px 0 11px;
+} /* =====================================   FEATURES===================================== */
+.hero-features {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.feature-item {
+  width: 100%;
+  text-align: center;
+  color: #687067;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 4px;
+  border: 1.5px solid #bd8f20;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b98b1c;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.feature-item span {
+  display: block;
+}
+.feature-item i {
+  font-size: 20px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 13px 8px 8px;
+  background: #183d32;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(24, 61, 50, 0.18);
+  transition: 0.3s;
+}
+.hero-cta:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+.cta-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  background: #d09b1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.cta-icon i {
+  font-size: 20px;
+}
+.hero-cta small,
+.hero-cta strong {
+  display: block;
+}
+.hero-cta small {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.hero-cta strong {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.hero-cta > i {
+  font-size: 12px;
+  margin-left: 3px;
+} /* =====================================   BOOK SHOWCASE===================================== */
+.book-showcase {
+  height: 400px;
+  position: relative;
+  margin-top: 5px;
+} /* DARK GREEN SHAPE */
+.book-bg {
+  position: absolute;
+  width: 74%;
+  height: 76%;
+  top: 3%;
+  left: 13%;
+  background: #0e3028;
+  border: 2px solid #bc8c1d;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  clip-path: polygon(13% 0, 80% 0, 100% 13%, 100% 100%, 0 100%, 0 13%);
+} /* =====================================   BOOKS===================================== */
+.book {
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+  transition: 0.3s;
+}
+.book:hover {
+  transform: translateY(-7px);
+  z-index: 10;
+}
+.book img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+} /* TOP BOOKS */
+.top-books {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  right: 0;
+  height: 165px;
+  z-index: 3;
+}
+.book-top {
+  width: 125px;
+  height: 164px;
+}
+.book-1 {
+  left: 32%;
+  transform: rotate(0deg);
+}
+.book-2 {
+  left: 51%;
+  top: 2px;
+  transform: rotate(1deg);
+} /* BOTTOM BOOKS */
+.bottom-books {
+  position: absolute;
+  top: 202px;
+  left: 5%;
+  right: 4%;
+  height: 185px;
+  z-index: 5;
+}
+.book-bottom {
+  width: 120px;
+  height: 174px;
+}
+.book-3 {
+  left: 12%;
+  top: 0;
+  transform: rotate(-1deg);
+}
+.book-4 {
+  left: 39%;
+  top: 3px;
+  transform: rotate(0deg);
+}
+.book-5 {
+  left: 66%;
+  top: 5px;
+  transform: rotate(1deg);
+} /* =====================================   PLANT===================================== */
+.plant-decoration {
+  position: absolute;
+  right: -10px;
+  bottom: 3px;
+  width: 100px;
+  height: 130px;
+  z-index: 8;
+}
+.plant-pot {
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  width: 55px;
+  height: 42px;
+  background: linear-gradient(135deg, #d9d0b9, #b8ad91);
+  border-radius: 4px 4px 12px 12px;
+}
+.leaf {
+  position: absolute;
+  width: 38px;
+  height: 18px;
+  background: #355746;
+  border-radius: 100% 0 100% 0;
+  transform-origin: bottom right;
+}
+.leaf1 {
+  right: 30px;
+  bottom: 40px;
+  transform: rotate(-55deg);
+}
+.leaf2 {
+  right: 20px;
+  bottom: 57px;
+  transform: rotate(-20deg);
+}
+.leaf3 {
+  right: 12px;
+  bottom: 72px;
+  transform: rotate(15deg);
+}
+.leaf4 {
+  right: 40px;
+  bottom: 67px;
+  transform: rotate(-75deg);
+}
+.leaf5 {
+  right: 4px;
+  bottom: 87px;
+  transform: rotate(40deg);
+} /* =====================================   DECORATIVE LEAVES===================================== */
+.hero-leaf {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  opacity: 0.12;
+  filter: blur(1px);
+}
+.hero-leaf-left {
+  left: -100px;
+  top: 0;
+  background: radial-gradient(ellipse, #304b3b 0 25%, transparent 27%);
+  transform: rotate(-25deg);
+}
+.hero-leaf-right {
+  right: -80px;
+  bottom: -80px;
+  background: radial-gradient(ellipse, #304b3b 0 25%, transparent 27%);
+  transform: rotate(30deg);
+} /* ==========================================   evermark INTRO SECTION========================================== */
+.evermark-intro {
+  padding: 72px 0 55px;
+  background: #fafaf6;
+} /* ==========================================   HEADING========================================== */
+.evermark-intro-heading {
+  margin-bottom: 45px;
+}
+.evermark-welcome {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.evermark-intro-heading h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.evermark-heading-line {
+  width: 75px;
+  height: 3px;
+  margin: 13px auto 13px;
+  background: #d19b18;
+  border-radius: 20px;
+}
+.evermark-intro-heading p {
+  margin: 0;
+  color: #555;
+  font-size: 18px;
+  font-weight: 400;
+} /* ==========================================   FEATURE ROW========================================== */
+.evermark-feature-row {
+  --bs-gutter-x: 12px;
+  --bs-gutter-y: 12px; /* max-width: 1000px; */
+  margin-left: auto;
+  margin-right: auto;
+} /* ==========================================   FEATURE CARD========================================== */
+.evermark-feature-card {
+  min-height: 160px;
+  padding: 14px 15px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid #e8e6df;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(40, 40, 30, 0.025);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+.evermark-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #ded3ae;
+  box-shadow: 0 12px 30px rgba(40, 40, 30, 0.07);
+} /* ==========================================   ICON BOX========================================== */
+.evermark-feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  background: #fffdf7;
+  border: 1px solid #ebe8df;
+  border-radius: 9px;
+  color: #d09b1c;
+  font-size: 26px;
+} /* ==========================================   CARD TITLE========================================== */
+.evermark-feature-card h3 {
+  margin: 0 0 12px;
+  color: #222;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+} /* ==========================================   CARD DESCRIPTION========================================== */
+.evermark-feature-card p {
+  /* max-width: 200px; */
+  margin: 0;
+  color: #6c6c6c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+} /* ==========================================   TABLET========================================== */
+@media (max-width: 991px) {
+  .evermark-intro {
+    padding: 60px 0 45px;
+  }
+  .evermark-intro-heading {
+    margin-bottom: 35px;
+  }
+  .evermark-intro-heading h2 {
+    font-size: 29px;
+  }
+  .evermark-feature-card {
+    min-height: 150px;
+  }
+} /* ==========================================   MOBILE========================================== */
+@media (max-width: 767px) {
+  .evermark-intro {
+    padding: 50px 15px 40px;
+  }
+  .evermark-intro-heading {
+    margin-bottom: 30px;
+  }
+  .evermark-intro-heading h2 {
+    font-size: 27px;
+  }
+  .evermark-feature-row {
+    --bs-gutter-x: 10px;
+    --bs-gutter-y: 10px;
+  }
+  .evermark-feature-card {
+    min-height: 145px;
+    padding: 15px;
+  }
+  .evermark-feature-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 14px;
+  }
+  .evermark-feature-card h3 {
+    font-size: 14px;
+  }
+  .evermark-feature-card p {
+    font-size: 18px;
+  }
+} /* ==========================================   SMALL MOBILE========================================== */
+@media (max-width: 480px) {
+  .main-top-header {
+    /* width: 90%; */
+  }
+  .evermark-intro-heading h2 {
+    font-size: 24px;
+  }
+  .evermark-feature-card {
+    min-height: 140px;
+  }
+}
+
+/* ========================================
+   FEATURED BOOKS
+======================================== */
+
+.featured-books-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+/* Header */
+.featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #c4931d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.featured-header h2 {
+  margin: 0 0 12px;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+/* View All */
+.view-all-books {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #c99516;
+  text-decoration: none;
+
+  /* font-family: Arial, sans-serif; */
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.view-all-books span {
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.view-all-books:hover {
+  color: #173d39;
+}
+
+.view-all-books:hover span {
+  transform: translateX(5px);
+}
+
+/* ========================================
+   BOOK CARD
+======================================== */
+
+.book-card {
+  width: 100%;
+}
+
+.book-image {
+  position: relative;
+  width: 100%;
+  height: 290px;
+
+  overflow: hidden;
+  border-radius: 7px;
+
+  background: #f5f1e8;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.45s ease;
+}
+
+/* Hover */
+.book-card:hover .book-image img {
+  transform: scale(1.04);
+}
+
+/* ========================================
+   BOOK INFORMATION
+======================================== */
+
+.book-info {
+  padding: 14px 4px 0;
+}
+
+.book-info h3 {
+  margin: 0 0 5px;
+
+  /* font-family: Arial, sans-serif; */
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+
+  color: #202020;
+}
+
+.book-info p {
+  margin: 0;
+
+  /* font-family: Arial, sans-serif; */
+  font-size: 13px;
+  line-height: 1.4;
+
+  color: #777777;
+}
+.bookSwiper {
+  width: 100%;
+  padding: 10px 5px 50px;
+}
+
+.bookSwiper .swiper-slide {
+  height: auto;
+}
+
+.book-card {
+  height: 100%;
+}
+
+.book-image {
+  overflow: hidden;
+}
+
+.book-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Navigation buttons */
+.bookSwiper .swiper-button-prev,
+.bookSwiper .swiper-button-next {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+}
+
+.bookSwiper .swiper-button-prev::after,
+.bookSwiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Pagination */
+.bookSwiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #999;
+  opacity: 1;
+}
+
+.bookSwiper .swiper-pagination-bullet-active {
+  background: #222;
+}
+
+/* ========================================
+   TESTIMONIAL SECTION
+======================================== */
+
+.testimonial-section {
+  padding: 75px 0;
+  background: #f2ede1;
+  overflow: hidden;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.testimonial-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* .section-label {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #777;
+} */
+
+.testimonial-heading h2 {
+  margin: 0 0 12px;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.view-all-reviews {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #c99516;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.view-all-reviews span {
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+
+.view-all-reviews:hover span {
+  transform: translateX(5px);
+}
+
+/* ========================================
+   SLIDER WRAPPER
+======================================== */
+
+.testimonial-slider-wrapper {
+  position: relative;
+  padding: 0 5px;
+}
+
+.testimonialSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonialSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* ========================================
+   TESTIMONIAL CARD
+======================================== */
+
+.testimonial-card {
+  width: 100%;
+  min-height: 170px;
+
+  padding: 27px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.035);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Stars */
+
+.testimonial-stars {
+  margin-bottom: 15px;
+
+  color: #d99d12;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* Text */
+
+.testimonial-text {
+  margin: 0 0 17px;
+
+  max-width: 330px;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: #3f3f3f;
+}
+
+/* Author */
+
+.testimonial-card h4 {
+  margin: auto 0 0;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #202020;
+}
+
+/* ========================================
+   NAVIGATION ARROWS
+======================================== */
+
+.testimonial-prev,
+.testimonial-next {
+  position: absolute;
+
+  top: 50%;
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+
+  color: #555;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition: all 0.3s ease;
+}
+
+.testimonial-prev {
+  left: -20px;
+}
+
+.testimonial-next {
+  right: -20px;
+}
+
+.testimonial-prev span,
+.testimonial-next span {
+  font-size: 21px;
+  line-height: 1;
+}
+
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  background: #c99516;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ========================================
+   DISABLED ARROW
+======================================== */
+
+.testimonial-prev.swiper-button-disabled,
+.testimonial-next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+  .testimonial-section {
+    padding: 60px 0;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 30px;
+  }
+
+  .testimonial-card {
+    min-height: 175px;
+  }
+
+  .testimonial-prev {
+    left: -10px;
+  }
+
+  .testimonial-next {
+    right: -10px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+  .testimonial-heading {
+    align-items: flex-start;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 27px;
+  }
+
+  .view-all-reviews {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .testimonial-slider-wrapper {
+    padding: 0 10px;
+  }
+
+  .testimonial-prev,
+  .testimonial-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .testimonial-prev {
+    left: -5px;
+  }
+
+  .testimonial-next {
+    right: -5px;
+  }
+
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 575px) {
+  .testimonial-section {
+    padding: 50px 0;
+  }
+
+  .testimonial-heading {
+    margin-bottom: 24px;
+  }
+
+  .testimonial-heading h2 {
+    font-size: 24px;
+  }
+
+  .testimonial-stars {
+    font-size: 18px;
+  }
+
+  .testimonial-card {
+    min-height: 180px;
+  }
+}
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+  .featured-books-section {
+    padding: 55px 0;
+  }
+
+  .featured-header h2 {
+    font-size: 30px;
+  }
+
+  .book-image {
+    height: 280px;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-books-section {
+    padding: 45px 0;
+  }
+
+  .featured-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .featured-header h2 {
+    font-size: 27px;
+  }
+
+  .section-label {
+    font-size: 10px;
+  }
+
+  .view-all-books {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .book-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .featured-header {
+    margin-bottom: 25px;
+  }
+
+  .featured-header h2 {
+    font-size: 24px;
+  }
+
+  .book-image {
+    height: 260px;
+  }
+
+  .book-info {
+    padding-top: 10px;
+  }
+
+  .book-info h3 {
+    font-size: 14px;
+  }
+
+  .book-info p {
+    font-size: 12px;
+  }
+}
+/* =========================================   evermark ABOUT SECTION========================================= */
+.evermark-about-section {
+  padding: 55px 0 70px;
+  background: #fafaf6;
+} /* =========================================   IMAGE========================================= */
+.evermark-about-image {
+  width: 100%;
+  height: 325px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e8e4d9;
+}
+.evermark-about-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.evermark-about-image:hover img {
+  transform: scale(1.02);
+} /* =========================================   CONTENT========================================= */
+.evermark-about-content {
+  padding-left: 15px;
+  max-width: 510px;
+} /* =========================================   SMALL LABEL========================================= */
+.evermark-about-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #c4931d;
+  font-size: 14px;
+  font-weight: 600;
+} /* =========================================   TITLE========================================= */
+.evermark-about-content h2 {
+  margin: 0 0 12px;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+} /* =========================================   DESCRIPTION========================================= */
+.evermark-about-content > p {
+  margin: 0 0 16px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 480px;
+} /* =========================================   POINTS========================================= */
+.evermark-about-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+  color: #626262;
+  font-size: 12px;
+  line-height: 1.5;
+} /* CHECK CIRCLE */
+.evermark-check {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d8cda9;
+  border-radius: 50%;
+  color: #bd8d1b;
+  font-size: 34px;
+  background: #fffdf7;
+} /* =========================================   BUTTON========================================= */
+.evermark-about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 9px 16px;
+  background: #d19b18;
+  color: #fff;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(197, 147, 24, 0.22);
+  transition: all 0.25s ease;
+}
+.evermark-about-btn:hover {
+  background: #183d32;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.evermark-about-btn i {
+  font-size: 12px;
+} /* =========================================   LAYANAN KAMI SECTION========================================= */
+.evermark-service-section {
+  padding: 58px 0 55px;
+  background: #f2ede1;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+} /* =========================================   HEADING========================================= */
+.evermark-service-heading {
+  margin-bottom: 18px;
+} /* SMALL LABEL */
+.evermark-service-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+} /* TITLE */
+.evermark-service-heading h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+} /* GOLD LINE */
+.evermark-service-line {
+  width: 58px;
+  height: 3px;
+  margin: 12px auto 11px;
+  background: #d09b19;
+  border-radius: 20px;
+} /* DESCRIPTION */
+.evermark-service-heading p {
+  margin: 0;
+  color: #5f5f5b;
+  font-size: 18px;
+  line-height: 1.5;
+} /* =========================================   SERVICE BOX========================================= */
+.evermark-service-box {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 25px 32px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid #dfdbd1;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(60, 55, 40, 0.025);
+} /* =========================================   LIST========================================= */
+.evermark-service-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 13px;
+  list-style: none;
+} /* LIST ITEM */
+.evermark-service-list li {
+  position: relative;
+  margin-bottom: 7px;
+  padding-left: 9px;
+  color: #50504d;
+  font-size: 16px;
+  line-height: 1.35;
+} /* BULLET */
+.evermark-service-list li::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background: #222;
+  border-radius: 50%;
+}
+.evermark-achievement-section {
+  padding: 48px 0 55px;
+  background: #faf9f4;
+} /* =========================================   TOP AREA========================================= */
+.evermark-achievement-top {
+  /* max-width: 900px; */
+  margin: 0 auto 24px;
+} /* =========================================   AUTHOR CARD========================================= */
+.evermark-author-card {
+  min-height: 124px;
+  padding: 19px 17px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid #e5e1d8;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(50, 45, 30, 0.025);
+}
+.evermark-author-card h2 {
+  margin: 0 0 9px;
+  color: #171717;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.evermark-author-card p {
+  margin: 0 0 13px;
+  color: #77736b;
+  font-size: 16px;
+  line-height: 1.5;
+} /* =========================================   CONTACT BUTTON========================================= */
+.evermark-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 13px;
+  background: #d19b18;
+  color: #fff;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 12px rgba(195, 145, 20, 0.2);
+  transition: all 0.25s ease;
+}
+.evermark-contact-btn:hover {
+  background: #183d32;
+  color: #fff;
+  transform: translateY(-2px);
+} /* =========================================   ACHIEVEMENT CONTENT========================================= */
+.evermark-achievement-content {
+  padding-left: 35px;
+}
+.evermark-achievement-content h2 {
+  margin: 0 0 14px;
+  color: #171717;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+} /* =========================================   STATS========================================= */
+.evermark-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 38px;
+}
+.evermark-stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 60px;
+}
+.evermark-stat strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #222;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.evermark-stat .evermark-title {
+  color: #222;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.evermark-stat span {
+  color: #222;
+  font-size: 26px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+/* =========================================   LARGE IMAGE========================================= */
+.evermark-achievement-image {
+  width: 100%; /* max-width: 900px; */
+  height: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #e4dfd4;
+}
+.evermark-achievement-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.evermark-achievement-image:hover img {
+  transform: scale(1.015);
+} /* =========================================   KARYA SECTION========================================= */
+.evermark-karya-section {
+  padding: 65px 0 75px;
+  background: #f2ede1;
+  overflow: hidden;
+} /* =========================================   MAIN ROW========================================= */
+.evermark-karya-row {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+} /* =========================================   LEFT SIDE========================================= */
+.evermark-karya-left {
+  position: relative;
+  padding-top: 4px;
+} /* SMALL TEXT */
+.evermark-karya-small {
+  display: block;
+  margin-bottom: 48px;
+  color: #55534d;
+  font-size: 16px;
+  line-height: 1.4;
+} /* =========================================   MAIN IMAGE========================================= */
+.evermark-karya-image-main {
+  width: 100%; /* max-width: 390px; */
+  height: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ddd7ca;
+}
+.evermark-karya-image-main img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.evermark-karya-image-main:hover img {
+  transform: scale(1.02);
+} /* =========================================   RIGHT SIDE========================================= */
+.evermark-karya-right {
+  position: relative;
+  padding-left: 18px;
+} /* HEADING */
+.evermark-karya-right h2 {
+  margin: 0 0 55px;
+  color: #151515;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+} /* =========================================   SECOND IMAGE========================================= */
+.evermark-karya-image-second {
+  width: 100%; /* max-width: 370px; */
+  height: 300px;
+  margin-left: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ddd7ca;
+}
+.evermark-karya-image-second img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.evermark-karya-image-second:hover img {
+  transform: scale(1.02);
+} /* =========================================   CAPTIONS========================================= */
+.evermark-karya-caption {
+  margin-top: 9px;
+}
+.evermark-karya-caption h3 {
+  margin: 0 0 10px;
+  color: #222;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.evermark-karya-caption p {
+  margin: 0;
+  color: #77736b;
+  font-size: 16px;
+  line-height: 1.5;
+} /* RIGHT CAPTION */
+.evermark-karya-caption.second {
+  max-width: 370px;
+} /* =========================================   KATALOG PRODUK SECTION========================================= */
+.evermark-catalog-section {
+  padding: 48px 0 45px;
+  background: #fafaf6;
+}
+
+.evermark-process-section {
+  position: relative;
+  padding: 100px 0;
+  background: #f8f6f1;
+  overflow: hidden;
+}
+
+/* SECTION HEADING */
+.evermark-process-heading {
+  max-width: 720px;
+  margin: 0 auto 60px;
+}
+
+.evermark-process-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.evermark-process-heading h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.evermark-process-line {
+  width: 55px;
+  height: 3px;
+  margin: 20px auto;
+  background: #b18a45;
+  border-radius: 10px;
+}
+
+.evermark-process-heading p {
+  max-width: 620px;
+  margin: 0;
+  color: #5f5f5b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* PROCESS ROW */
+.evermark-process-row {
+  position: relative;
+}
+.evermark-process-row::before {
+  content: "";
+  position: absolute;
+  top: 55px;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: #d9c7a5;
+  z-index: 0;
+}
+.evermark-process-card {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 35px 25px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #eee7da;
+  border-radius: 12px;
+  transition: all 0.35s ease;
+}
+.evermark-process-card h3 {
+  margin: 0 0 12px;
+  color: #222;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* CARD TEXT */
+.evermark-process-card p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* HOVER */
+.evermark-process-card:hover {
+  transform: translateY(-8px);
+  border-color: #b18a45;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.evermark-process-card:hover .evermark-process-icon {
+  background: #183d32;
+}
+.evermark-process-cta {
+  max-width: 700px;
+  margin: 70px auto 0;
+  padding: 45px 30px;
+  background: #222;
+  border-radius: 14px;
+}
+
+.evermark-process-cta h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.evermark-process-cta p {
+  margin: 0 0 25px;
+  color: #ccc;
+  font-size: 15px;
+}
+
+/* CTA BUTTON */
+.evermark-process-cta .evermark-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 25px;
+  color: #fff;
+  background: #b18a45;
+  border: 1px solid #b18a45;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.evermark-process-cta .evermark-contact-btn:hover {
+  color: #222;
+  background: #fff;
+  border-color: #fff;
+}
+/* NUMBER */
+.evermark-process-number {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  color: #e8dfd0;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* ICON */
+.evermark-process-icon {
+  position: relative;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #b18a45;
+  border: 6px solid #f8f6f1;
+  border-radius: 50%;
+  font-size: 25px;
+  box-shadow: 0 8px 20px rgba(177, 138, 69, 0.2);
+} /* =========================================   HEADING========================================= */
+.evermark-catalog-heading {
+  margin-bottom: 30px;
+}
+.evermark-catalog-heading h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  color: #171717;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+} /* GOLD UNDERLINE */
+.evermark-catalog-line {
+  width: 65px;
+  height: 2px;
+  margin: 4px auto 0;
+  background: #d09b19;
+  border-radius: 20px;
+  transform: rotate(-3deg);
+}
+@media (max-width: 991px) {
+  .evermark-process-section {
+    padding: 80px 0;
+  }
+
+  .evermark-process-heading h2 {
+    font-size: 36px;
+  }
+
+  .evermark-process-row::before {
+    display: none;
+  }
+
+  .evermark-process-card {
+    margin-bottom: 25px;
+  }
+
+  .evermark-process-cta {
+    margin-top: 45px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 575px) {
+  .evermark-process-section {
+    padding: 65px 0;
+  }
+
+  .evermark-process-heading {
+    margin-bottom: 40px;
+  }
+
+  .evermark-process-heading h2 {
+    font-size: 30px;
+  }
+
+  .evermark-process-heading p {
+    font-size: 14px;
+  }
+
+  .evermark-process-card {
+    padding: 30px 22px;
+  }
+
+  .evermark-process-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 22px;
+  }
+
+  .evermark-process-card h3 {
+    font-size: 18px;
+  }
+
+  .evermark-process-cta {
+    padding: 35px 20px;
+    border-radius: 10px;
+  }
+
+  .evermark-process-cta h3 {
+    font-size: 23px;
+  }
+
+  .evermark-process-cta p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .evermark-process-cta .evermark-contact-btn {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+}
+.evermark-product-row {
+  /* max-width: 930px; */ /* margin: 0 auto; */
+  --bs-gutter-x: 10px;
+  --bs-gutter-y: 12px;
+}
+
+.evermark-product-card {
+  height: 100%;
+  padding: 8px;
+  background: #f3eee2;
+  border: 1px solid #e5dfd1;
+  border-radius: 11px;
+  box-shadow: 0 4px 15px rgba(50, 45, 30, 0.025);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.evermark-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(50, 45, 30, 0.08);
+} /* =========================================   PRODUCT IMAGE========================================= */
+.evermark-product-image {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f3eee2;
+  border-radius: 8px;
+}
+.evermark-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.evermark-product-card:hover .evermark-product-image img {
+  transform: scale(1.035);
+} /* =========================================   PRODUCT NAME========================================= */
+.evermark-product-card h3 {
+  min-height: 50px;
+  margin: 7px 3px 6px;
+  color: #292929;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.25;
+} /* =========================================   PRODUCT INFO========================================= */
+.evermark-product-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  background: #fffdf8;
+  border: 1px solid #e4dccb;
+  border-radius: 10px;
+  color: #77736b;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 6px;
+  font-weight: 400;
+}
+.evermark-info-icon {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c69319;
+  font-size: 6px;
+} /* =========================================   PRICE========================================= */
+.evermark-product-price {
+  margin: 7px 3px 7px;
+  color: #d0920d;
+  font-size: 16px;
+  font-weight: 600;
+} /* =========================================   BUY BUTTON========================================= */
+.evermark-buy-button {
+  width: 100%; /* height: 25px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d09a18;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(197, 145, 18, 0.18);
+  transition: all 0.25s ease;
+  padding: 8px 10px;
+}
+.evermark-buy-button:hover {
+  background: #183d32;
+  color: #fff;
+  transform: translateY(-1px);
+} /* =========================================   BOTTOM NOTE========================================= */
+.evermark-catalog-note {
+  /* max-width: 930px; */ /* height: 23px; */
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 9px auto 0;
+  padding: 6px 8px;
+  background: #fffdf8;
+  border: 1px solid #d9b85c;
+  border-radius: 15px;
+  color: #68645c;
+  font-size: 14px;
+} /* NOTE ICON */
+.evermark-note-icon {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #d39b18;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+} /* =========================================   KIRIM NASKAH SECTION========================================= */
+.evermark-submit-section {
+  padding: 55px 0 60px;
+  background: #f2ede1;
+  overflow: hidden;
+}
+.evermark-submit-section p {
+  margin: 0;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.7;
+} /* =========================================   CONTENT========================================= */
+.evermark-submit-content {
+  padding-left: 35px;
+} /* SMALL LABEL */
+.evermark-submit-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #55534d;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+} /* =========================================   HEADING========================================= */
+.evermark-submit-content h2 {
+  margin: 0 0 25px;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+} /* =========================================   BUTTON========================================= */
+.evermark-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 9px 16px;
+  background: #d09a18;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(194, 143, 19, 0.22);
+  transition: all 0.25s ease;
+}
+.evermark-submit-btn:hover {
+  background: #183d32;
+  color: #fff;
+  transform: translateY(-2px);
+} /* =========================================   IMAGE========================================= */
+.evermark-submit-image {
+  width: 100%;
+  max-width: 440px;
+  height: 220px;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 13px;
+  background: #ddd7c9;
+}
+.evermark-submit-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+.evermark-submit-image:hover img {
+  transform: scale(1.02);
+}
+
+.evermark-faq-section {
+  padding: 48px 0 55px;
+  background: #fafaf6;
+}
+
+/* Heading */
+
+.evermark-faq-heading {
+  margin-bottom: 50px;
+}
+
+.evermark-faq-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #b28a4a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.evermark-faq-heading h2 {
+  margin: 0;
+  color: #151515;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.evermark-faq-heading h2 span {
+  color: #b28a4a;
+}
+
+.evermark-faq-heading p {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
+.evermark-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.evermark-faq-item {
+  overflow: hidden;
+  border: 1px solid #e7e2d9;
+  border-radius: 14px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.evermark-faq-item:hover {
+  border-color: #d5c09d;
+}
+
+.evermark-faq-item.active {
+  border-color: #b28a4a;
+  box-shadow: 0 12px 35px rgba(40, 30, 15, 0.07);
+}
+
+/* Question */
+
+.evermark-faq-question {
+  width: 100%;
+  padding: 24px 26px;
+  border: 0;
+  outline: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #242424;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.evermark-faq-question span {
+  padding-right: 20px;
+}
+
+.evermark-faq-question i {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #f3eee6;
+  color: #b28a4a;
+
+  font-size: 21px;
+  transition: all 0.3s ease;
+}
+
+/* Open icon */
+
+.evermark-faq-question:not(.collapsed) i {
+  background: #b28a4a;
+  color: #fff;
+  transform: rotate(45deg);
+}
+
+/* Answer */
+
+.evermark-faq-answer {
+  padding: 0 75px 26px 26px;
+  color: #707070;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .evermark-faq-section {
+    padding: 70px 0;
+  }
+
+  .evermark-faq-heading {
+    margin-bottom: 35px;
+  }
+
+  .evermark-faq-heading h2 {
+    font-size: 34px;
+  }
+
+  .evermark-faq-heading p {
+    font-size: 14px;
+  }
+
+  .evermark-faq-question {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .evermark-faq-question i {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .evermark-faq-answer {
+    padding: 0 20px 22px;
+    font-size: 14px;
+  }
+}
+* .evermark-faq-contact {
+  max-width: 930px;
+  min-height: 45px;
+  margin: 13px auto 0;
+  padding: 7px 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e0bb58;
+  border-radius: 11px;
+  background: #fffdf8;
+  color: #62605a;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.evermark-faq-contact:hover {
+  background: #f8f0dc;
+  color: #3d3b35;
+} /* CONTACT ICON */
+.evermark-faq-contact-icon {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #d19b18;
+  color: #fff;
+  font-size: 10px;
+} /* =========================================   BRAND STATEMENT SECTION========================================= */
+.evermark-brand-section {
+  width: 100%;
+  background: #f2ede1;
+  overflow: hidden;
+} /* =========================================   TOP IMAGE========================================= */
+.evermark-brand-image {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+}
+.evermark-brand-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+.evermark-brand-image:hover img {
+  transform: scale(1.015);
+} /* =========================================   BRAND CONTENT========================================= */
+.evermark-brand-content {
+  padding: 38px 20px 40px;
+  text-align: center;
+} /* =========================================   MAIN TITLE========================================= */
+.evermark-brand-content h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+} /* =========================================   SMALL DESCRIPTION========================================= */
+.evermark-brand-content p {
+  margin: 15px 0 0;
+  color: #66635d;
+  font-size: 18px;
+  line-height: 1.5;
+} /* =========================================   ARTIKEL SECTION========================================= */
+.evermark-article-section {
+  padding: 60px 0 65px;
+  background: #fafaf6;
+  overflow: hidden;
+} /* =========================================   HEADING========================================= */
+.evermark-article-heading {
+  margin-bottom: 25px;
+} /* SMALL LABEL */
+.evermark-article-small {
+  display: block;
+  margin-bottom: 7px;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+} /* TITLE */
+.evermark-article-heading h2 {
+  margin: 0;
+  color: #171717;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.evermark-article-heading h2 span {
+  color: #c89518;
+} /* =========================================   SEARCH========================================= */
+.evermark-article-search {
+  width: 190px;
+  height: 22px;
+  display: flex;
+  margin: 12px auto 0;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(40, 40, 30, 0.025);
+}
+.evermark-article-search input {
+  width: calc(100% - 27px);
+  height: 100%;
+  padding: 0 8px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #555;
+  font-family: "DM Sans", sans-serif;
+  font-size: 6px;
+}
+.evermark-article-search input::placeholder {
+  color: #999;
+}
+.evermark-article-search button {
+  width: 27px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: #c99418;
+  color: #fff;
+  font-size: 7px;
+  cursor: pointer;
+} /* =========================================   ARTICLE ROW========================================= */
+.evermark-article-row {
+  /* max-width: 870px; */
+  margin: 0 auto;
+  --bs-gutter-x: 13px;
+  --bs-gutter-y: 25px;
+} /* =========================================   ARTICLE CARD========================================= */
+.evermark-article-card {
+  height: 100%;
+} /* =========================================   ARTICLE IMAGE========================================= */
+.evermark-article-image {
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ddd7ca;
+  margin-bottom: 20px;
+}
+.evermark-article-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+.evermark-article-card:hover .evermark-article-image img {
+  transform: scale(1.025);
+} /* =========================================   META========================================= */
+.evermark-article-meta {
+  margin-top: 7px;
+  color: #8b887f;
+  font-size: 12px;
+  font-weight: 500;
+} /* =========================================   TITLE========================================= */
+.evermark-article-card h3 {
+  margin: 5px 0 4px;
+  color: #242424;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.7;
+  min-height: 75px;
+} /* =========================================   CATEGORY========================================= */
+.evermark-article-category {
+  display: block;
+  color: #c69218;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+} /* =========================================   DESCRIPTION========================================= */
+.evermark-article-card p {
+  /* max-width: 250px; */
+  margin: 0;
+  color: #77746c;
+  font-size: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+} /* =========================================   evermark FOOTER========================================= */
+.evermark-footer {
+  background: #0b1815;
+  color: #252525;
+  overflow: hidden;
+} /* =========================================   TOP CTA========================================= */
+.evermark-footer-cta {
+  padding: 42px 0 32px;
+  border-bottom: 1px solid #e2ddcf;
+  text-align: center;
+}
+.evermark-footer-cta-content h2 {
+  margin: 0;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.evermark-footer-cta-content p {
+  margin: 12px 0 15px;
+  color: #66625a;
+  font-size: 16px;
+  line-height: 1.7;
+} /* CTA BUTTON */
+.evermark-footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 30px; */
+  padding: 9px 16px;
+  background: #d09a18;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(194, 143, 19, 0.22);
+  transition: all 0.25s ease;
+}
+.evermark-footer-cta-btn:hover {
+  background: #183d32;
+  color: #fff;
+  transform: translateY(-2px);
+} /* =========================================   FOOTER MAIN========================================= */
+.evermark-footer-main {
+  padding: 50px 0 0;
+} /* =========================================   BRAND========================================= */
+.evermark-footer-brand {
+  text-align: center;
+}
+.evermark-footer-brand h3 {
+  margin: 0 0 3px;
+  color: #222;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.evermark-footer-brand p {
+  margin: 0;
+  color: #666;
+  font-size: 18px;
+} /* =========================================   DIVIDER========================================= */
+.evermark-footer-divider {
+  width: 100%;
+  height: 1px;
+  margin: 12px 0 15px;
+  background: #e0dbcf;
+} /* =========================================   FOOTER COLUMNS========================================= */
+.evermark-footer-columns {
+  --bs-gutter-x: 25px; /* max-width: 900px; */
+  margin: 0 auto;
+} /* =========================================   LOGO========================================= */
+.evermark-footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  margin-bottom: 18px;
+}
+.evermark-logo-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c6941a;
+  font-size: 30px;
+}
+.evermark-footer-logo strong {
+  color: #324136;
+  font-size: 12px;
+  letter-spacing: 1px;
+} /* =========================================   FOLLOW========================================= */
+.evermark-follow > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #fff;
+  font-size: 16px;
+}
+.evermark-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.evermark-socials a {
+  color: #b98818;
+  font-size: 22px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.evermark-socials a:hover {
+  color: #183d32;
+  transform: translateY(-2px);
+} /* =========================================   FOOTER COLUMN========================================= */
+.evermark-footer-column h4 {
+  margin: 0 0 13px;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.evermark-footer-column ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.evermark-footer-column li {
+  margin-bottom: 7px;
+}
+.evermark-footer-column li a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.evermark-footer-column li a:hover {
+  color: #c39018;
+} /* =========================================   ADDRESS========================================= */
+.evermark-address-title {
+  display: block;
+  margin-bottom: 7px;
+  color: #c39018;
+  font-size: 16px;
+  text-decoration: none;
+}
+.evermark-footer-column p {
+  margin: 0 0 9px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.evermark-user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+  font-size: 16px;
+}
+.evermark-user i {
+  font-size: 12px;
+} /* =========================================   PHONE========================================= */
+.evermark-phone {
+  display: block;
+  margin-top: 7px;
+  color: #d08f08;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.evermark-phone:hover {
+  color: #183d32;
+} /* =========================================   EMAIL========================================= */
+.evermark-email {
+  display: inline-block;
+  margin-top: 8px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: underline;
+} /* =========================================   BOTTOM========================================= */
+.evermark-footer-bottom {
+  margin-top: 18px;
+  padding: 12px 0;
+  border-top: 1px solid #e0dbcf;
+}
+.evermark-footer-bottom p {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+} /* =========================================   WHATSAPP========================================= */
+.evermark-whatsapp {
+  position: fixed;
+  left: 8px;
+  bottom: 8px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #19b84a;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+.evermark-whatsapp:hover {
+  color: #fff;
+  transform: scale(1.05);
+} /* =========================================   BACK TO TOP========================================= */
+.evermark-back-top {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ce9517;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  z-index: 100;
+  transition: 0.2s;
+}
+.evermark-back-top:hover {
+  background: #183d32;
+  color: #fff;
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-footer-cta {
+    padding: 40px 20px 30px;
+  }
+  .evermark-footer-columns {
+    max-width: 750px;
+    row-gap: 30px;
+  }
+  .evermark-footer-logo {
+    margin-bottom: 12px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-footer-cta {
+    padding: 38px 15px 28px;
+  }
+  .evermark-footer-cta-content h2 {
+    font-size: 25px;
+  }
+  .evermark-footer-cta-content p {
+    font-size: 7px;
+  }
+  .evermark-footer-main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .evermark-footer-brand h3 {
+    font-size: 11px;
+  }
+  .evermark-footer-columns {
+    row-gap: 25px;
+  }
+  .evermark-footer-column h4 {
+    margin-bottom: 9px;
+  }
+  .evermark-phone {
+    font-size: 10px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-article-section {
+    padding: 50px 20px 55px;
+  } /* .evermark-article-row {    max-width: 720px;  } */
+  .evermark-article-image {
+    height: 145px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-article-section {
+    padding: 45px 15px 50px;
+  }
+  .evermark-article-heading h2 {
+    font-size: 23px;
+  }
+  .evermark-article-search {
+    width: 210px;
+  }
+  .evermark-article-row {
+    --bs-gutter-y: 22px;
+  }
+  .evermark-article-image {
+    height: 190px;
+  }
+  .evermark-article-card h3 {
+    font-size: 11px;
+  }
+  .evermark-article-card p {
+    font-size: 7px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-brand-image {
+    height: 230px;
+  }
+  .evermark-brand-content {
+    padding: 35px 20px;
+  }
+  .evermark-brand-content h2 {
+    font-size: 31px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-brand-image {
+    height: 200px;
+  }
+  .evermark-brand-content {
+    padding: 30px 15px 35px;
+  }
+  .evermark-brand-content h2 {
+    font-size: 26px;
+  }
+  .evermark-brand-content p {
+    font-size: 6.5px;
+    margin-top: 12px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-faq-section {
+    padding: 45px 20px 50px;
+  }
+  .evermark-faq-top {
+    max-width: 750px;
+  }
+  .evermark-faq-info {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  .evermark-faq-list,
+  .evermark-faq-contact {
+    max-width: 750px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-faq-section {
+    padding: 40px 15px 45px;
+  }
+  .evermark-faq-heading h2 {
+    font-size: 24px;
+  }
+  .evermark-faq-info {
+    min-height: auto;
+    padding: 15px;
+    font-size: 7px;
+  }
+  .evermark-faq-question {
+    min-height: 34px;
+    padding: 8px 10px;
+    font-size: 7px;
+  }
+  .evermark-faq-answer {
+    padding: 14px;
+    font-size: 7px;
+  }
+  .evermark-faq-contact {
+    min-height: 42px;
+    font-size: 6.5px;
+  }
+} /* =========================================   DESKTOP========================================= */
+@media (min-width: 992px) {
+  .evermark-submit-content {
+    padding-left: 35px;
+  }
+  .evermark-submit-image {
+    margin-right: 25px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-submit-section {
+    padding: 50px 20px;
+  }
+  .evermark-submit-content {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  .evermark-submit-image {
+    max-width: 100%;
+    margin: 0;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-submit-section {
+    padding: 45px 15px 50px;
+  }
+  .evermark-submit-content h2 {
+    font-size: 27px;
+  }
+  .evermark-submit-btn {
+    margin-top: 24px;
+  }
+  .evermark-submit-image {
+    height: 210px;
+    border-radius: 11px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-catalog-section {
+    padding: 45px 20px;
+  } /* .evermark-product-row {    max-width: 720px;  } */
+  .evermark-product-image {
+    height: 135px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 767px) {
+  .evermark-catalog-section {
+    padding: 40px 15px;
+  }
+  .evermark-catalog-heading h2 {
+    font-size: 23px;
+  }
+  .evermark-product-row {
+    --bs-gutter-x: 8px;
+    --bs-gutter-y: 10px;
+  }
+  .evermark-product-card {
+    padding: 8px;
+  }
+  .evermark-product-image {
+    height: 145px;
+  }
+  .evermark-catalog-note {
+    margin-top: 12px;
+  }
+} /* =========================================   SMALL MOBILE========================================= */
+@media (max-width: 480px) {
+  .evermark-product-image {
+    height: 125px;
+  }
+  .evermark-product-card h3 {
+    font-size: 12px;
+  }
+  .evermark-product-info {
+    font-size: 5px;
+  }
+  .evermark-product-price {
+    font-size: 12px;
+  }
+  .evermark-buy-button {
+    /* height: 26px; */
+    font-size: 5px;
+  }
+} /* =========================================   DESKTOP POSITIONING========================================= */
+@media (min-width: 992px) {
+  .evermark-karya-left {
+    padding-left: 5px;
+  }
+  .evermark-karya-right {
+    padding-left: 20px;
+  }
+  .evermark-karya-image-second {
+    margin-top: 0;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-karya-section {
+    padding: 55px 20px 60px;
+  }
+  .evermark-karya-small {
+    margin-bottom: 25px;
+  }
+  .evermark-karya-right {
+    padding-left: 0;
+    margin-top: 45px;
+  }
+  .evermark-karya-right h2 {
+    margin-bottom: 30px;
+  }
+  .evermark-karya-image-main,
+  .evermark-karya-image-second {
+    max-width: 100%;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-karya-section {
+    padding: 45px 15px 50px;
+  }
+  .evermark-karya-small {
+    margin-bottom: 20px;
+  }
+  .evermark-karya-image-main,
+  .evermark-karya-image-second {
+    height: 230px;
+    border-radius: 7px;
+  }
+  .evermark-karya-right {
+    margin-top: 40px;
+  }
+  .evermark-karya-right h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  .evermark-karya-caption h3 {
+    font-size: 14px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-achievement-section {
+    padding: 45px 20px 50px;
+  }
+  .evermark-achievement-top {
+    max-width: 750px;
+  }
+  .evermark-achievement-content {
+    padding-left: 20px;
+  }
+  .evermark-achievement-image {
+    height: 300px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 767px) {
+  .evermark-achievement-section {
+    padding: 40px 15px 45px;
+  }
+  .evermark-author-card {
+    margin-bottom: 20px;
+  }
+  .evermark-achievement-content {
+    padding-left: 0;
+  }
+  .evermark-achievement-content h2 {
+    font-size: 20px;
+  }
+  .evermark-stats {
+    gap: 25px;
+  }
+  .evermark-achievement-image {
+    height: 240px;
+    margin-top: 5px;
+  }
+} /* =========================================   SMALL MOBILE========================================= */
+@media (max-width: 480px) {
+  .evermark-author-card h2 {
+    font-size: 16px;
+  }
+  .evermark-stats {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .evermark-stat span {
+    white-space: normal;
+  }
+  .evermark-achievement-image {
+    height: 210px;
+    border-radius: 11px;
+  }
+} /* =========================================   LAST ITEM========================================= */
+.evermark-service-list li:last-child {
+  margin-bottom: 0;
+} /* =========================================   DESKTOP========================================= */
+@media (min-width: 1200px) {
+  .evermark-service-section {
+    min-height: 420px;
+  }
+  .evermark-service-box {
+    max-width: 750px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-service-section {
+    padding: 55px 20px;
+  }
+  .evermark-service-heading h2 {
+    font-size: 27px;
+  }
+  .evermark-service-box {
+    max-width: 700px;
+    padding: 23px 28px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 767px) {
+  .evermark-service-section {
+    padding: 50px 15px;
+  }
+  .evermark-service-heading {
+    margin-bottom: 22px;
+  }
+  .evermark-service-heading h2 {
+    font-size: 25px;
+  }
+  .evermark-service-box {
+    padding: 22px 20px;
+    border-radius: 14px;
+  }
+  .evermark-service-list {
+    margin-bottom: 8px;
+  }
+  .evermark-service-list li {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+} /* =========================================   SMALL MOBILE========================================= */
+@media (max-width: 480px) {
+  .evermark-service-heading h2 {
+    font-size: 22px;
+  }
+  .evermark-service-heading p {
+    font-size: 7px;
+  }
+  .evermark-service-box {
+    padding: 20px 16px;
+  }
+  .evermark-service-list {
+    padding-left: 10px;
+  }
+  .evermark-service-list li {
+    font-size: 7.5px;
+  }
+} /* =========================================   TABLET========================================= */
+@media (max-width: 991px) {
+  .evermark-about-section {
+    padding: 50px 0 60px;
+  }
+  .evermark-about-image {
+    height: 300px;
+  }
+  .evermark-about-content {
+    padding-left: 0;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+} /* =========================================   MOBILE========================================= */
+@media (max-width: 575px) {
+  .evermark-about-section {
+    padding: 40px 15px 50px;
+  }
+  .evermark-about-image {
+    height: 270px;
+    border-radius: 12px;
+  }
+  .evermark-about-content {
+    margin-top: 15px;
+  }
+  .evermark-about-content h2 {
+    font-size: 26px;
+  }
+  .evermark-about-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .evermark-about-point {
+    font-size: 12px;
+  }
+} /* =====================================   RESPONSIVE===================================== */
+@media (max-width: 991px) {
+  .main-header {
+    height: auto;
+  }
+  .navbar {
+    min-height: 70px;
+  }
+  .navbar-collapse {
+    background: #f5f0e2;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 8px;
+  }
+  .navbar-nav {
+    gap: 2px;
+  }
+  .nav-link {
+    padding: 10px !important;
+  }
+  .talk-btn {
+    display: inline-flex;
+    margin-top: 8px;
+  }
+  .hero-section {
+    padding: 35px 0;
+  }
+  .hero-row {
+    min-height: auto;
+    padding: 0px 0;
+  }
+  .hero-content {
+    padding-bottom: 20px;
+  }
+  .hero-section .book-showcase {
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .top-bar {
+    height: auto;
+    padding: 6px 0;
+    display: none;
+  }
+  .top-bar-inner {
+    height: auto;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .top-contact {
+    gap: 10px;
+  }
+  .hero-section {
+    padding: 90px 0 60px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 34px;
+  }
+  .hero-script {
+    margin-left: 0;
+  }
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-features {
+    justify-content: center;
+    gap: 8px;
+  }
+  .hero-cta {
+    margin: 0 auto;
+  }
+  .book-showcase {
+    height: 350px;
+    margin-top: 25px;
+  }
+  .book-bg {
+    width: 80%;
+    left: 10%;
+  }
+  .book-top {
+    width: 100px;
+    height: 140px;
+  }
+  .book-1 {
+    left: 28%;
+  }
+  .book-2 {
+    left: 52%;
+  }
+  .book-bottom {
+    width: 95px;
+    height: 140px;
+  }
+  .book-3 {
+    left: 5%;
+  }
+  .book-4 {
+    left: 37%;
+  }
+  .book-5 {
+    left: 69%;
+  }
+  .plant-decoration {
+    transform: scale(0.75);
+    transform-origin: bottom right;
+  }
+}
+@media (max-width: 480px) {
+  .top-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-content h1 {
+    font-size: 29px;
+  }
+  .hero-script {
+    font-size: 46px;
+  }
+  .hero-features {
+    gap: 2px;
+  }
+  .feature-item {
+    width: 65px;
+  }
+  .book-showcase {
+    height: 310px;
+  }
+  .book-top {
+    width: 80px;
+    height: 115px;
+  }
+  .book-bottom {
+    width: 75px;
+    height: 115px;
+  }
+  .bottom-books {
+    top: 180px;
+  }
+  .plant-decoration {
+    right: -20px;
+    transform: scale(0.55);
+  }
+}
+.author-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+}
+
+.author-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin-bottom: 12px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f4541;
+}
+
+.benefit-icon {
+  width: 18px;
+  height: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 18px;
+
+  border-radius: 50%;
+
+  background: #173d39;
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+.author-benefits li:hover .benefit-icon {
+  background: #c99516;
+  transition: 0.3s ease;
+} /* =========================================
+   PUBLISHING SERVICES
+========================================= */
+
+.publishing-services {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  width: 100%;
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 16px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee9df;
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fbf3df;
+
+  color: #c99516;
+
+  font-size: 21px;
+
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.service-content {
+  min-width: 0;
+}
+
+.service-content h3 {
+  margin: 0 0 6px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #202522;
+}
+
+.service-content p {
+  /* max-width: 190px; */
+
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  color: #6f716d;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.service-card:hover {
+  border-color: #e3d9bd;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 24px rgba(30, 45, 40, 0.06);
+}
+
+.service-card:hover .service-icon {
+  background: #173d39;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .service-card {
+    min-height: 100px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+  .publishing-services {
+    padding: 40px 0;
+  }
+
+  .service-card {
+    min-height: 92px;
+
+    gap: 14px;
+
+    padding: 14px;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    font-size: 19px;
+  }
+
+  .service-content h3 {
+    font-size: 13px;
+  }
+
+  .service-content p {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   BLOG PAGE
+========================================= */
+
+.blog-page {
+  padding: 75px 0 90px;
+  background: #f9f7f1;
+  color: #222;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.blog-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+.blog-heading {
+  max-width: 650px;
+}
+
+.blog-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #77746c;
+}
+
+.blog-eyebrow::before {
+  content: "";
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+  background: #c99516;
+}
+
+.blog-heading h1 {
+  margin: 0 0 13px;
+
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+
+  color: #173d39;
+}
+
+.blog-heading h1 span {
+  color: #c99516;
+}
+
+.blog-heading p {
+  max-width: 590px;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.75;
+
+  color: #777;
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.blog-search {
+  width: 300px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #e4dfd4;
+  border-radius: 7px;
+
+  background: #fff;
+}
+
+.blog-search input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 15px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  font-size: 12px;
+  color: #333;
+}
+
+.blog-search input::placeholder {
+  color: #999;
+}
+
+.blog-search button {
+  width: 46px;
+  height: 100%;
+
+  border: 0;
+  background: transparent;
+
+  color: #173d39;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.blog-categories {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 35px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.blog-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category-btn {
+  flex: 0 0 auto;
+
+  padding: 9px 17px;
+
+  border: 1px solid #e3ded3;
+  border-radius: 30px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  border-color: #173d39;
+  background: #173d39;
+  color: #fff;
+}
+
+/* =========================================
+   FEATURED BLOG
+========================================= */
+
+.featured-blog {
+  overflow: hidden;
+
+  margin-bottom: 70px;
+
+  border-radius: 14px;
+
+  background: #173d39;
+
+  box-shadow: 0 15px 40px rgba(23, 61, 57, 0.1);
+}
+
+.featured-blog-image {
+  height: 100%;
+  min-height: 410px;
+}
+
+.featured-blog-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.featured-blog-content {
+  height: 100%;
+  min-height: 410px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+.featured-tag {
+  width: fit-content;
+
+  margin-bottom: 15px;
+  padding: 6px 10px;
+
+  border-radius: 4px;
+
+  background: rgba(201, 149, 22, 0.16);
+
+  color: #e3b943;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.featured-blog-content h2 {
+  max-width: 520px;
+
+  margin: 0 0 18px;
+
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+
+  color: #fff;
+}
+
+.featured-blog-content h2 span {
+  color: #e3b943;
+}
+
+.featured-blog-content > p {
+  max-width: 540px;
+
+  margin: 0 0 22px;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.featured-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.featured-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.featured-meta i {
+  color: #d7aa32;
+}
+
+.read-more-btn {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 17px;
+
+  border-radius: 5px;
+
+  background: #c99516;
+
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #fff;
+  color: #173d39;
+}
+
+/* =========================================
+   ARTICLES HEADING
+========================================= */
+
+.articles-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.articles-heading h2 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 600;
+
+  color: #173d39;
+}
+
+.articles-heading h2 span {
+  color: #c99516;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #c99516;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.view-all:hover {
+  color: #173d39;
+}
+
+/* =========================================
+   BLOG CARD
+========================================= */
+
+.blog-card {
+  height: 100%;
+  overflow: hidden;
+
+  border: 1px solid #e8e3d9;
+  border-radius: 11px;
+
+  background: #fff;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(30, 40, 35, 0.08);
+}
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.blog-card-image {
+  position: relative;
+
+  height: 220px;
+
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-category {
+  position: absolute;
+
+  left: 15px;
+  bottom: 15px;
+
+  padding: 6px 9px;
+
+  border-radius: 4px;
+
+  background: #fff;
+
+  color: #173d39;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.blog-card-content {
+  padding: 23px;
+}
+
+.blog-card-meta {
+  display: flex;
+  gap: 7px;
+
+  margin-bottom: 10px;
+
+  color: #999;
+
+  font-size: 10px;
+}
+
+.blog-card-meta span {
+  color: #c99516;
+}
+
+.blog-card-content h3 {
+  min-height: 55px;
+
+  margin: 0 0 12px;
+
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 600;
+
+  color: #173d39;
+}
+
+.blog-card-content p {
+  margin: 0 0 18px;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: #777;
+}
+
+.blog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #c99516;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.blog-link i {
+  transition: transform 0.3s ease;
+}
+
+.blog-link:hover {
+  color: #173d39;
+}
+
+.blog-link:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 55px;
+}
+
+.pagination-arrow,
+.pagination-number {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e3ded3;
+  border-radius: 5px;
+
+  background: #fff;
+
+  color: #555;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.pagination-number.active,
+.pagination-number:hover,
+.pagination-arrow:hover {
+  border-color: #173d39;
+
+  background: #173d39;
+
+  color: #fff;
+}
+
+.blog-pagination > span {
+  padding: 0 3px;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .blog-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .blog-search {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .featured-blog-image {
+    min-height: 350px;
+  }
+
+  .featured-blog-content {
+    min-height: auto;
+    padding: 40px;
+  }
+
+  .blog-card-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-page {
+    padding: 55px 0 65px;
+  }
+
+  .blog-heading h1 {
+    font-size: 38px;
+  }
+
+  .blog-heading p {
+    font-size: 13px;
+  }
+
+  .featured-blog {
+    border-radius: 10px;
+  }
+
+  .featured-blog-image {
+    min-height: 280px;
+  }
+
+  .featured-blog-content {
+    padding: 30px 25px;
+  }
+
+  .featured-blog-content h2 {
+    font-size: 28px;
+  }
+
+  .articles-heading h2 {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-page {
+    padding: 45px 0 55px;
+  }
+
+  .blog-page-header {
+    margin-bottom: 25px;
+  }
+
+  .blog-heading h1 {
+    font-size: 34px;
+  }
+
+  .blog-categories {
+    margin-bottom: 25px;
+  }
+
+  .featured-blog {
+    margin-bottom: 50px;
+  }
+
+  .featured-blog-image {
+    min-height: 230px;
+  }
+
+  .featured-blog-content {
+    padding: 25px 20px;
+  }
+
+  .featured-blog-content h2 {
+    font-size: 25px;
+  }
+
+  .featured-meta {
+    gap: 10px;
+  }
+
+  .articles-heading {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .blog-card-image {
+    height: 210px;
+  }
+
+  .blog-card-content {
+    padding: 20px;
+  }
+}
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-page {
+  background: #f8f5ed;
+  color: #222;
+}
+
+/* =========================================
+   COMMON
+========================================= */
+
+.contact-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  color: #77736a;
+}
+
+.contact-label::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 7px;
+
+  border-radius: 50%;
+
+  background: #c99516;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.contact-hero {
+  padding: 80px 0;
+
+  background:
+    radial-gradient(
+      circle at 78% 35%,
+      rgba(201, 149, 22, 0.08),
+      transparent 25%
+    ),
+    #f8f5ed;
+}
+
+.contact-hero-content {
+  max-width: 550px;
+}
+
+.contact-hero h1 {
+  margin: 0 0 20px;
+
+  font-size: clamp(45px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 600;
+
+  color: #173d39;
+}
+
+.contact-hero h1 span {
+  color: #c99516;
+}
+
+.contact-hero-content > p {
+  max-width: 510px;
+
+  margin-bottom: 28px;
+
+  font-size: 16px;
+  line-height: 1.85;
+
+  color: #77746d;
+}
+
+.contact-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 19px;
+
+  border-radius: 5px;
+
+  background: #173d39;
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.contact-main-btn:hover {
+  background: #c99516;
+  color: #fff;
+}
+
+.contact-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #ded8cb;
+  border-radius: 5px;
+
+  background: #fff;
+
+  color: #173d39;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.contact-call-btn:hover {
+  border-color: #173d39;
+  background: #173d39;
+  color: #fff;
+}
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.contact-hero-image {
+  position: relative;
+
+  padding: 10px;
+}
+
+.contact-hero-image img {
+  width: 100%;
+  height: 400px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+}
+
+.contact-image-card {
+  position: absolute;
+
+  left: 0;
+  bottom: 30px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 17px 22px;
+
+  border-radius: 7px;
+
+  background: #173d39;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.contact-image-card span {
+  margin-bottom: 4px;
+
+  font-size: 8px;
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-image-card strong {
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #d8ad39;
+}
+
+/* =========================================
+   CONTACT INFO
+========================================= */
+
+.contact-info-section {
+  /* padding: 0 0 75px; */
+
+  background: #f8f5ed;
+}
+
+.contact-info-card {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 24px;
+
+  border: 1px solid #e7e1d5;
+  border-radius: 9px;
+
+  background: #fff;
+
+  transition: 0.3s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d8cda9;
+
+  box-shadow: 0 10px 28px rgba(25, 40, 35, 0.06);
+}
+
+.contact-info-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fbf2dc;
+
+  color: #c99516;
+
+  font-size: 19px;
+}
+
+.contact-info-card span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  color: #89857c;
+}
+
+.contact-info-card h3 {
+  margin: 0 0 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #173d39;
+}
+
+.contact-info-card p {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  color: #777;
+  display: none;
+}
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.contact-form-section {
+  padding: 90px 0;
+
+  background: #fff;
+}
+
+.contact-form-intro {
+  max-width: 480px;
+
+  padding-top: 15px;
+}
+
+.contact-form-intro h2,
+.contact-help-content h2 {
+  margin: 0 0 18px;
+  color: #111;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.contact-form-intro h2 span,
+.contact-help-content h2 span {
+  color: #c99516;
+}
+
+.contact-form-intro > p {
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #77746d;
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.form-benefit {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.form-benefit > i {
+  margin-top: 2px;
+
+  color: #173d39;
+
+  font-size: 20px;
+}
+
+.form-benefit strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #333;
+}
+
+.form-benefit p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #85827a;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.contact-form-card {
+  padding: 35px;
+
+  border: 1px solid #e8e2d6;
+  border-radius: 12px;
+
+  background: #fff;
+
+  box-shadow: 0 12px 35px rgba(30, 40, 35, 0.05);
+}
+
+.contact-form-card label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #41443f;
+}
+
+.contact-input {
+  width: 100%;
+
+  min-height: 44px;
+
+  padding: 10px 13px;
+
+  border: 1px solid #e3ded4;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #fcfbf8;
+
+  color: #333;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #173d39;
+
+  background: #fff;
+
+  box-shadow: 0 0 0 3px rgba(23, 61, 57, 0.06);
+}
+
+.contact-input::placeholder {
+  color: #aaa;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 135px;
+}
+
+.contact-check {
+  display: flex !important;
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.contact-check input {
+  width: 14px;
+  height: 14px;
+
+  margin-top: 1px;
+
+  accent-color: #173d39;
+}
+
+.contact-check span {
+  font-size: 14px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: #777;
+}
+
+.contact-submit {
+  width: 100%;
+
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: #173d39;
+
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.contact-submit:hover {
+  background: #c99516;
+}
+
+/* =========================================
+   HELP SECTION
+========================================= */
+
+.contact-help {
+  padding: 90px 0;
+
+  background: #f1ecdf;
+}
+
+.contact-help-image img {
+  width: 100%;
+  height: 400px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+}
+
+.contact-help-content {
+  max-width: 500px;
+}
+
+.contact-help-content > p {
+  margin-bottom: 25px;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  color: #77746d;
+}
+
+.contact-help-content ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0 0 27px;
+}
+
+.contact-help-content li {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 11px;
+
+  font-size: 12px;
+
+  color: #50534e;
+}
+
+.contact-help-content li i {
+  color: #173d39;
+}
+
+/* =========================================
+   FAQ
+========================================= */
+
+.contact-faq {
+  padding: 90px 0;
+
+  background: #fff;
+}
+
+.contact-section-heading {
+  max-width: 650px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.contact-section-heading h2 {
+  margin: 0 0 12px;
+
+  font-size: 40px;
+
+  color: #173d39;
+}
+
+.contact-section-heading h2 span {
+  color: #c99516;
+}
+
+.contact-section-heading p {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #777;
+}
+
+.contact-accordion .accordion-item {
+  margin-bottom: 10px;
+
+  overflow: hidden;
+
+  border: 1px solid #e8e2d7 !important;
+
+  border-radius: 7px !important;
+
+  background: #fff;
+}
+
+.contact-accordion .accordion-button {
+  padding: 17px 20px;
+
+  background: #fff;
+
+  color: #173d39;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: none;
+}
+
+.contact-accordion .accordion-button:not(.collapsed) {
+  background: #fbf7ed;
+
+  color: #173d39;
+}
+
+.contact-accordion .accordion-button::after {
+  background-size: 12px;
+}
+
+.contact-accordion .accordion-body {
+  padding: 0 20px 18px;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: #777;
+}
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.contact-final {
+  padding: 70px 0;
+
+  background: #f8f5ed;
+}
+
+.contact-final-inner {
+  padding: 55px 30px;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+  background: #173d39;
+}
+
+.contact-final-inner > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+  letter-spacing: 1.6px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-final-inner h2 {
+  margin: 0 0 12px;
+
+  font-size: 39px;
+  line-height: 1.15;
+
+  color: #fff;
+}
+
+.contact-final-inner h2 strong {
+  color: #d9ad38;
+}
+
+.contact-final-inner p {
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-final-inner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border-radius: 5px;
+
+  background: #c99516;
+
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.contact-final-inner a:hover {
+  background: #fff;
+
+  color: #173d39;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .contact-hero,
+  .contact-form-section,
+  .contact-help,
+  .contact-faq {
+    padding: 65px 0;
+  }
+
+  .contact-hero-image img {
+    height: 350px;
+  }
+
+  .contact-form-intro h2,
+  .contact-help-content h2,
+  .contact-section-heading h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    padding: 50px 0;
+  }
+
+  .contact-hero h1 {
+    font-size: 42px;
+  }
+
+  .contact-hero-image img {
+    height: 280px;
+  }
+
+  .contact-image-card {
+    left: 15px;
+    bottom: 20px;
+  }
+
+  .contact-form-card {
+    padding: 25px 20px;
+  }
+
+  .contact-help-image img {
+    height: 280px;
+  }
+
+  .contact-final-inner {
+    padding: 40px 20px;
+  }
+
+  .contact-final-inner h2 {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-hero h1 {
+    font-size: 36px;
+  }
+
+  .contact-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-info-card {
+    padding: 18px;
+  }
+
+  .contact-info-icon {
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 43px;
+  }
+
+  .contact-form-intro h2,
+  .contact-help-content h2,
+  .contact-section-heading h2 {
+    font-size: 30px;
+  }
+
+  .contact-help {
+    padding: 55px 0;
+  }
+}
+
+.about-page-hero {
+  padding: 12px 0 55px;
+
+  background: #fbfaf6;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.about-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  line-height: 1;
+  color: #85857d;
+}
+
+.about-breadcrumb a {
+  color: #777970;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.about-breadcrumb a:hover {
+  color: #c69519;
+}
+
+.about-breadcrumb span:nth-child(2) {
+  color: #b5b3aa;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-hero-content {
+  max-width: 540px;
+}
+
+.about-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #292d29;
+}
+
+.about-hero-content h1 {
+  margin: 0 0 18px;
+
+  font-size: 48px;
+  line-height: 1.5;
+  font-weight: 600;
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: -1.2px;
+
+  color: #173d39;
+}
+
+.about-hero-content h1 span {
+  color: #c69519;
+}
+
+.about-hero-content p {
+  max-width: 470px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.about-hero-image {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: #e9e1d1;
+}
+
+.about-hero-image img {
+  width: 100%;
+  height: 320px;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 9px;
+
+  transition: transform 0.5s ease;
+}
+
+.about-hero-image:hover img {
+  transform: scale(1.02);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+  .about-page-hero {
+    padding: 12px 0 55px;
+  }
+
+  .about-breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .about-hero-content {
+    max-width: 600px;
+  }
+
+  .about-hero-image img {
+    height: 300px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+  .about-page-hero {
+    padding: 10px 0 45px;
+  }
+
+  .about-breadcrumb {
+    margin-bottom: 25px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 40px;
+    letter-spacing: -0.8px;
+  }
+
+  .about-hero-content p {
+    font-size: 12px;
+  }
+
+  .about-hero-image img {
+    height: 260px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 575px) {
+  .about-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .about-eyebrow {
+    font-size: 12px;
+  }
+
+  .about-hero-content p {
+    font-size: 12px;
+  }
+
+  .about-hero-image img {
+    height: 220px;
+  }
+}
